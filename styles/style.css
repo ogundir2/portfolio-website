@@ -1,3 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 62.5%;
+  font-family: "Hanken Grotesk", "sans-serif";
+}
+
+body {
+  background: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 10vh;
+  padding: 0 4rem;
+}
+#nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+#nav #main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+#nav #main-menu li {
+  list-style: none;
+}
+#nav #main-menu a:hover {
+  color: rgb(27, 115, 57);
+}
+#nav #main-menu .active {
+  border-bottom: solid 0.25rem rgb(27, 115, 57);
+}
+#nav #dark-mode-toggle-div {
+  text-align: end;
+}
+#nav #dark-mode-toggle-div button {
+  background: none;
+  border: none;
+}
+#nav #dark-mode-toggle-div button:hover {
+  cursor: pointer;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer #socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem 4rem;
+  background: rgb(0, 0, 0);
+}
+#footer #socials a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+#footer #socials li {
+  list-style: none;
+}
 
 /*# sourceMappingURL=style.css.map */

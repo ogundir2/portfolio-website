@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Font Size Variables
+$heading1: 2.0rem;
+$heading2: 2.8rem;
+$heading3: 2rem;
+$button: 2.4rem;
+$text: 1.4rem;
+$footer: 2.8rem;
+
+// Color Variables
+$secondary: rgba(27, 115, 57, 1);
+$primary-background: rgba(255,255,255,1);
+$primary: rgba(0,0,0,1);
+
+// Mixins
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'Hanken Grotesk', 'sans-serif';
+}
+
+body
+{
+    background: $primary-background;
+}
+
+h1
+{
+    font-size: $heading1;
+}
+
+#nav
+{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    height: 10vh;
+    padding: 0 4rem;
+
+    a
+    {
+        text-decoration: none;
+        color: $primary;
+    }
+
+    #main-menu
+    {
+        @include flex(row, space-between, center);
+        font-size: $text;
+        font-weight: bold;
+
+        li
+        {
+            list-style: none;
+        }
+
+        a:hover
+        {
+            color: $secondary;
+        }
+
+        .active
+        {
+            border-bottom: solid 0.25rem $secondary;
+        }
+    }
+
+    #dark-mode-toggle-div
+    {
+        text-align: end;
+
+        button
+        {
+            background: none;
+            border: none;
+        }
+
+        button:hover
+        {
+            cursor: pointer;
+        }
+    }
+}
+
+#footer
+{
+    @include flex(row, center, center);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    #socials
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        padding: 1rem 4rem;
+        background: $primary;
+
+        a
+        {
+            text-decoration: none;
+            color: $primary-background;
+        }
+
+        li
+        {
+            list-style: none;
+        }
+    }
+}
