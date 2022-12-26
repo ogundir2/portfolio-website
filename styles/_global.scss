@@ -104,16 +104,16 @@ h1
 {
     @include flex(row, center, center);
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
 
     #socials
     {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        padding: 1rem 4rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 4rem;
+        padding: 4rem 1rem;
         background: $primary;
 
         a
@@ -125,6 +125,23 @@ h1
         li
         {
             list-style: none;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #dark-mode-toggle-div, h1
+    {
+        display: none;
+    }
+
+    #nav
+    {
+        @include flex(row, center, center);
+
+        #main-menu
+        {
+            grid-gap: 5rem;
         }
     }
 }
