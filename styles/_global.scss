@@ -9,11 +9,14 @@
 
 // Font Size Variables
 $heading1: 2.0rem;
-$heading2: 2.8rem;
-$heading3: 2rem;
-$button: 2.4rem;
-$text: 1.4rem;
+$heading2: 3.6rem;
+$intro-heading: 5rem;
+$intro-subheading: 2.4rem;
+$text: 1.6rem;
 $footer: 2.8rem;
+
+// Spacing
+$global-side-padding: 4rem;
 
 // Color Variables
 $secondary: rgba(27, 115, 57, 1);
@@ -32,6 +35,7 @@ html
 {
     font-size: 62.5%;
     font-family: 'Hanken Grotesk', 'sans-serif';
+    scroll-behavior: smooth;
 }
 
 body
@@ -44,16 +48,19 @@ h1
     font-size: $heading1;
 }
 
+h2
+{
+    font-size: $heading2;
+    font-weight: normal;
+}
+
 #nav
 {
-    position: fixed;
-    top: 0;
-    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 10vh;
-    padding: 0 4rem;
+    padding: 0 $global-side-padding;
 
     a
     {
@@ -144,4 +151,29 @@ h1
             grid-gap: 5rem;
         }
     }
+}
+
+@media screen and (min-width: 1600px) {
+    body
+    {
+        padding: 0 16rem 0 16rem;
+    }
+}
+
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -1,0 +1,41 @@
+#intro
+{
+    @include flex(column, center, center);
+    height: 90vh;
+    padding: 2rem;
+
+    #intro-heading
+    {
+        font-size: $intro-heading;
+        text-align: center;
+
+        #intro-name
+        {
+            color: $secondary;
+        }
+    }
+
+    #intro-subheading
+    {
+        font-size: $intro-subheading;
+        
+        a
+        {
+            @include flex(row, center, center);
+            color: $primary;
+            text-decoration: none;
+            border-bottom: solid $primary-background;
+        }
+
+        a:hover
+        {
+            border-bottom-color: $primary;
+        }
+    }
+}
+
+#about
+{
+    height: 100vh;
+    padding: 0 $global-side-padding;
+}
